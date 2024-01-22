@@ -1,138 +1,162 @@
-body{
-    margin:0;
-    padding:0;
-}
-.cvhere  a{
-    color: #0094FF;
-}
-a{
-    color: transparent;
-}
-/* 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Rock+3D&display=swap');
 
 
-
-*/
-.introduction {
-    background-color: white;
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#ececec;
+    --red:#ee0000;
+    --border:.1rem solid rgba(255,255,255,.03);
 }
-.contact {
-    background-color: blue;
-}
-.project {
-    background-color: blue;
-}
-/* 
-
-
-
-
-*/
-
-/* BORDER */
-.border-1{
-    border-bottom: 1px solid black;
-}
- 
-/* CENTER ALL */
-.d-flex-items-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*  */
-.d-flex-items-left{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.d-flex-items-right{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-/* PADDING */
-.paddingright100{
-    padding-right: 100px;
-}
-/* MARGIN HERE */
-.margintop293px{
-     margin-top:293px;
-}
-.marginbottom220px{
-    margin-bottom:220px;
-}
-.margin0{
-    margin:0;
-}
-
-/* HEIGHT HERE */
-.height1000px{
-    height:52.083333333333336vw;
-}
-.height500px{
-    height:500px;
-}
-.height100{
-    height:100%;
-}
-
-/* WIDTHH */
-.wid100 {
-    width:100%;
-}
-
- 
-
-/* FONT SIZE */
-.fs64{
-    font-size: 	3.3333vw;
-}
-.fs36{
-    font-size: 	1.875vw;
-}
-.fs32{
-    font-size: 	1.6667vw;
-}
-.text-center{
-    text-align: center;
-}
-
-
-/* FONT FAMILY */
-.font1{
+*{
     font-family: 'Inter', sans-serif;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-}
-.font2{
-    font-family: 'Rock 3D', system-ui;
-}
-
-
-/* COLUMN AND ROW */
-.column {
-  float: left;
-  width: 36.33%;
-  padding: 15px;
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* UI */
-.socials{
-    max-height:  4.166666666666667vw;
-    max-width:64.95278069254984vh;
+    /* font-family: 'Rock 3D', system-ui; */
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
  
-    border-radius: 5.246589716684155vh;
-    background: #D9D9D9;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::webkit-scrollbar{
+    width: .8rem;
+}
+
+html::webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+section{
+    padding: 2rem 1%;
+}
+
+/* .header{
+    background: var(--bg);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position:fixed;
+    top: 0; left: 0; right: 0;
+    z-index:1000;
+ 
+} */
+ 
+.content .profiles {
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    background-color: rgb(207, 207, 207);
+    padding:2rem;
+    border-radius: 15rem;
+    margin-top:2rem;
+}
+
+.content {
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    margin: 3rem;
+}
+
+.content .profiles:hover {
+    background-color: rgb(184, 184, 184);
 }
 
  
+.content h4{
+    font-size: 3.5rem;
+    padding-left: 1rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+
+.content h4 a{
+    color: rgb(29, 145, 253);
+    text-decoration: underline;
+     text-align: center;
+     margin-top: 10rem;
+}
+.content h4 a:hover{
+    background-color: rgb(29, 145, 253);
+    color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding: 1rem;
+}
+
+ 
+ 
+.content .logo img{
+    height:4rem;
+    padding-left: 1rem;
+}
+
+
+.content .logo img:hover{
+ 
+    display: flex;
+    text-align: center;
+    padding:.1rem;
+    padding-left:  2rem;
+    padding-right:  2rem;    
+}
+
+.home {
+    min-height: 90vh;
+    display: flex;
+ 
+    justify-content:center;
+    background-size: cover;
+
+}
+
+.home .content {
+    max-width: 100rem;
+    
+}
+
+.home .content h3{
+    font-size: 3.5rem;
+}
+.home .content h2{
+    font-size: 6.5rem;
+    
+ 
+}
+
+
+/* media queries */
+@media (max-width:991px) {
+    html{
+        font-size: 30%;
+    }
+    .home {
+        min-height: 70vh;
+    }
+    .header{
+        padding:1.5rem 2rem;
+    }
+    section{
+        padding:2rem;
+    }
+    
+}
